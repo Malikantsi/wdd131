@@ -26,6 +26,14 @@ header {
     border-radius: 4px;
     
 }
+.navigation a {
+    color: white;
+    text-decoration: none;   
+    
+}
+.navigation a:hover {
+    color: blueviolet;
+}
 .container {
     display: grid;
     grid-template-columns: 1fr 300px;    
