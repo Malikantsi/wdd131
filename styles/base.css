@@ -1,6 +1,5 @@
 .montserrat-font{
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
+    font-family: "Montserrat", sans-serif;    
     font-weight:normal;
     font-style: normal;
 }
@@ -149,7 +148,7 @@ figure {
     flex-direction: column;
     width: 250px;
     height: auto;
-    flex: left;
+    
 
 }
 
