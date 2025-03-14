@@ -8,6 +8,14 @@
     <title>WDD 131 – Dynamic Web Fundamentals -Malikantsi Lekhoana</title>
     <link rel="stylesheet" href="styles/base.css">
     <meta name="author" content="Malikantsi Lekhoana">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <script src="scripts/getdates.js" defer></script>
+
+
 </head>
 
 <body>
@@ -27,35 +35,27 @@
     <main>
 
         <section class="card about-me">
-            <h2>About me</h2>
-            <div class="about-me-details">
-                <p>My name is Malikantsi Lekhoana i was born in Lesotho , I got married in South Africa where i stay with my family
-                    ,I am a stay at home mom currently working on opening a home based bakery and getting my Degree at BYU.
-                </p>
-                <img src="images/snap-shot.png" alt="Malikantsi profile picture">
+            <h2 class="about-me-header">About me</h2>
+            <p>My name is Malikantsi Lekhoana i was born in Lesotho , I got married in South Africa where i stay with my
+                family
+                ,I am a stay at home mom currently working on opening a home based bakery and getting my Degree at BYU.
+            </p>
+            <img src="images/snap-shot.png" alt="Malikantsi profile picture" />
 
-            </div>
-            
-
-            <h2 class="country">Johannesburg South Africa</h2>
+            <h2 class="country-header">Johannesburg South Africa</h2>
 
             <div class="country-details">
                 <figure>
                     <img src="images/south-african-flag.png" alt="south-african-flag">
-                    <figcaption>Offical flag of South Africa</figcaption>                
+                    <figcaption>Offical flag of South Africa</figcaption>
                 </figure>
-                
-                
-                <p>South Africa is a country located at the southern tip of the African continent, known for its diverse cultures,
-                    stunning
-                    landscapes, and rich history. It is home to a wide variety of ecosystems, including savannas, deserts, and coastal
-                    regions, and boasts an incredible array of wildlife, including the "Big Five" (lion, leopard, rhinoceros, elephant,
-                    and
-                    buffalo). South Africa is a cultural melting pot, with 11 official languages and a vibrant mix of traditions</p>
 
-                
+                <p>South Africa is a country located at the southern tip of the African continent, known for its diverse
+                    cultures, stunning landscapes, and rich history.
+                    It is home to a wide variety of ecosystems, including savannas, deserts, and coastal
+                    regions, and boasts an incredible array of wildlife, including the "Big Five" (lion, leopard, rhinoceros, elephant, and buffalo).</p>
             </div>
-           
+
         </section>
 
         <section class="card web-resources">
@@ -71,14 +71,15 @@
 
         </section>
 
-        
-        
-            
-        
+
+
+
+
     </main>
 
     <footer>
-        <p>&copy;2025 🌴Malikants Lekhoana🌴South Africa</p>
+        <p>&copy;<span id="currentyear"></span> 🌴Malikants Lekhoana🌴South Africa</p>
+
         <p id="lastModified">Last Modification: </p>
     </footer>
 
