@@ -1,0 +1,31 @@
+.roboto-font {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;    
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+header{
+    background-color: aqua;
+    padding: 2px;
+}
+
+body{
+    width: 640px;
+    margin: 1rem auto;
+    padding: 0;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: aqua;
+    grid-gap: 1rem;
+
+}
+section{
+    background-color: aliceblue;
+}
+footer{
+    background-color: aqua;
+    padding: 2px;
+}
