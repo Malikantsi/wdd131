@@ -99,9 +99,7 @@ figcaption {
     content: "☰";
 }
 
-#menu.open::before {
-    content: "❌";
-}
+
 
 @media(max-width:500px) {
     
