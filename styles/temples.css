@@ -109,7 +109,7 @@ figcaption {
         display: none;
         /* Initially hidden */
         flex-direction: column;
-        background-color: #75704E;
+        background-color: #cacc90;
         width: 100%;
         position: absolute;
         top: 60px;
