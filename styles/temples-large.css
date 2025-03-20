@@ -1,0 +1,15 @@
+@media screen and (min-width:500px) {
+    
+    .container{
+        display: grid;        
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+    }
+     main {
+        max-width: 1000px;
+    }
+        #menu {
+            display: none;
+        }
+
+}
