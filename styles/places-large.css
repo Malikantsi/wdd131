@@ -68,6 +68,11 @@
 
     }
 
+    /* tr ,th img{
+        display: grid;
+        grid-template-rows: 1fr 2fr;
+    } */
+
     footer {
         text-align: center;
         padding: 15px;
