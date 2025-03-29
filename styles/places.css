@@ -1,3 +1,9 @@
+:root {
+    --primary-color: #0E402D;
+    --accent-color: #9fcc2e;
+    --footer-color: #295135;
+    --text-light: white;
+}
 .montserrat-font {
     font-family: "Montserrat", sans-serif;
     font-weight: normal;
@@ -19,8 +25,8 @@ body {
 }
 
 header {
-    background-color: #0E402D;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--text-light);
     text-align: center;
     padding: 10px;
 }
@@ -74,7 +80,7 @@ table th {
 
 .table-header th {
     width: 80%;
-    background-color: #9fcc2e;
+    background-color: var(--accent-color);
     text-align: left;
     color: #000000;
     position: absolute;
@@ -92,9 +98,9 @@ table th {
 
 
 footer {
-    background-color: #295135;
+    background-color: var(--footer-color);
     border: 1px solid black;
-    color: white;
+    color: var(--text-light);
     margin: 0;
     text-align: center;
 
