@@ -1,0 +1,86 @@
+.montserrat-font {
+    font-family: "Montserrat", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
+body, main, section , footer{
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: "Montserrat", sans-serif;
+    margin: 0 auto;
+    width: 1000px;
+}
+header{
+    background-color: #0E402D;
+    color: white;
+    text-align: center;
+    padding: 10px; 
+}
+
+picture img{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+main{
+    margin: 0;
+}
+.data{
+    position: relative;
+    min-height: 600px;
+}
+    .data div {
+        background: #f0f8ffbf;
+        color: black;
+        margin: 0;
+            padding: 0;
+    }
+
+.weather{
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+}
+
+.data-details{
+    position:absolute;
+    left: 10px;
+    top: 20px;
+}
+ table {
+     padding: 10px;
+ }
+ table th {
+     text-align: right;
+ }
+.table-header{
+    position: relative;
+    height: 60px;
+}
+    .table-header th{
+        width: 80%;
+        background-color: #9fcc2e;
+        text-align: left;
+        color: #000000;
+        position: absolute;
+        top: 5px;
+        left: -20px;
+        padding: 15px;
+    }
+        .table-header th img{
+            width: 40px;
+            float: right;
+            height: auto;
+        }
+   
+
+footer{
+    background-color: #295135;
+    border: 1px solid black;
+    color: white;
+    margin: 0;
+    text-align: center;
+    
+}

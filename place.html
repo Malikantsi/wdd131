@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Page</title>
+    <meta name="description" content="WDD 131 -Country Page-Malikantsi Lekhoana">
+    <meta name="author" content="Malikantsi">
+    <link rel="stylesheet" href="styles/places.css">
+    <link rel="stylesheet" href="styles/places-large.css">
+    <script src="scripts/places.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>South Africa</h1>
+
+    </header>
+    <main>
+
+        <section class="data">
+            <picture>
+                <source srcset="images/hero-large.jpeg" media="(min-width: 1000px)">
+                <source srcset="images/hero-medium.jpg" media="(min-width: 500px)">
+                <img src="images/hero-small.jpeg" alt="Utah Temple">
+            </picture>
+            <div class="data-details">
+
+               <table>
+                    <tr class="table-header">
+                        <th colspan="2">
+                            Data
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>Area:</th>
+                        <td>1,220,813 sq km</td>
+                    </tr>
+                    <tr>
+                        <th>Population:</th>
+                        <td>63.21m</td>
+                    </tr>
+                    <tr>
+                        <th>Capital:</th>
+                        <td>Pretoria</td>
+                    </tr>
+                    <tr>
+                        <th>Languages:</th>
+                        <td>11</td>
+                    </tr>
+                    <tr>
+                        <th>Currency:</th>
+                        <td>Rand</td>
+                    </tr>
+                    <tr>
+                        <th>Time Zone:</th>
+                        <td>UTC+2</td>
+                    </tr>
+                    <tr>
+                        <th>Calling Code:</th>
+                        <td>+27</td>
+                    </tr>
+                    <tr>
+                        <th>Internet TLD:</th>
+                        <td>co.za</td>
+                    </tr>
+                </table>
+
+            </div>
+            <div class="weather">
+                <table>
+                    <tr class="table-header">
+                        <th colspan="2">
+                            Weather
+                            <!-- <img src="images/weather.svg" alt="weather icon"> -->
+                        </th>
+                    </tr>
+                
+                    <tr>
+                        <th>Temperature:</th>
+                        <td>20&deg;C</td>
+                    </tr>
+                    <tr>
+                        <th>Condition:</th>
+                        <td>Partly Cloudy</td>
+                    </tr>
+                    <tr>
+                        <th>Wind:</th>
+                        <td>2km/h</td>
+                    </tr>
+                    <tr>
+                        <th>Humidity:</th>
+                        <td>92%</td>
+                    </tr>
+                    
+                </table>
+
+            </div>
+
+
+        </section>
+
+    </main>
+    <footer>
+        <p>&copy;<span id="currentyear"></span>😎 Malikants Lekhoana😎 South Africa</p>
+
+        <p id="lastModified">Last Modification: </p>
+    </footer>
+
+</body>
+
+</html>
