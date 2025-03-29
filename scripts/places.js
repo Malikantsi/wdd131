@@ -20,7 +20,7 @@ function calculateWindChill(temp, windSpeed) {
 }
 
 function updateWindChill() {
-    const windChillElement = document.querySelector('#windChillValue');
+    const windChillElement = document.querySelector("#windChillValue");
     let windChill = 'N/A';
 
     
