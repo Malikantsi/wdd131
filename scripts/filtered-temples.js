@@ -83,7 +83,7 @@ const temples = [
         area: 47413,
         imageUrl:
             "https://churchofjesuschristtemples.org/assets/img/temples/lima-peru-los-olivos-temple/lima-peru-los-olivos-temple-42524-main.jpg"
-    },
+    }/*,
     {
         
         templeName: "Modesto, California",
@@ -118,7 +118,7 @@ const temples = [
             "https://churchofjesuschristtemples.org/assets/img/temples/johannesburg-south-africa-temple/johannesburg-south-africa-temple-22477.jpg"
 
 
-    }
+    }*/
     
 ];
 
