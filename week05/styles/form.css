@@ -1,0 +1,107 @@
+.montserrat-font {
+    font-family: "Montserrat", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+header,footer {
+    text-align: center;
+    padding: 1rem;  
+    width: 100%;   
+    background-color:#B89E97;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+form {
+    width: 100%;
+    max-width: 600px;
+    padding: 2rem;
+    background-color: #DECCCC;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.form-group {
+    margin: 1rem 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    font-size: 2em;
+    cursor: pointer;
+}
+
+input[type="submit"] {
+    background: #4CAF50;
+    color: white;
+    padding: 1rem;
+    border: none;
+    cursor: pointer;
+}
+input[type="radio"] {
+    display: none;
+    position: relative;
+}
+
+.stars {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: left;
+}
+
+.stars>label {
+    color: #1098F7;
+    width: 30px;
+    height: 30px;
+    font-size: 2rem;
+    margin-left: 5px;
+    display: flex;
+    align-items: center;    
+}
+
+.stars>label:hover {
+    color: #000;
+}
+
+.stars>label::before {
+    content: "\2606";
+}
+
+.stars input:checked~label::before {
+    content: "\2605";
+}
+
+@media (min-width: 600px) {
+    form {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
+
