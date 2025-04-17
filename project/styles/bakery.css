@@ -158,6 +158,17 @@ footer {
 }
 
 @media (max-width: 480px) {
+    body{
+        width:100%;
+    }
+
+    .hero img{
+        width: 100%;
+    }
+    
+    .hero-text {
+       visibility: hidden;
+    }
     header h1 {
         font-size: 1.25rem;
     }
