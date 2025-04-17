@@ -162,8 +162,8 @@ footer {
         width:100%;
     }
 
-    .hero img{
-        width: 100%;
+    .hero{
+        padding: 0;
     }
     
     .hero-text {
@@ -175,6 +175,7 @@ footer {
 
     .section-title {
         font-size: 1.5rem;
+        /* line-height: normal; */
     }
 
     .btn-download {
