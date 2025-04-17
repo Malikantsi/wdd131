@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content=" Gallery Page">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="styles/bakery.css">
+    <meta name="author" content="Malikantsi Lekhoana">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <script src="scripts/bakery.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="images/logo.jpeg" alt="">
+            <h1> Mellow & Cream By Lucia</h1>
+        </div>
+        <nav>
+            <a href="Index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contactUs.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <main class="gallery-page">
+        <h2 class="section-title">GALLERY</h2>
+
+        <section class="featured-gallery">
+            <div class="main-gallery">
+                <div class="main-image"></div>
+                <div class="event-description">
+                    <h3>Event Name</h3>
+                    <p><strong>Event Date:</strong> 20 March 2025</p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra
+                        nec...
+                    </p>
+                </div>
+            </div>
+            <div class="thumbnail-gallery">
+                <div class="thumb"></div>
+                <div class="thumb"></div>
+                <div class="thumb"></div>
+                <div class="thumb"></div>
+            </div>
+        </section>
+
+        <section class="events">
+            <h2 class="section-title">EVENTS</h2>
+            <div class="event-grid">
+                <!-- Repeat block -->
+                <div class="event-card">
+                    <div class="event-img"></div>
+                    <h4>Event Name</h4>
+                    <p><strong>Date:</strong> 20 March 2025</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <!-- End repeat -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="currentyear"></span> Mellow & Cream by Lucia. All rights reserved.</p>
+    
+        <p id="lastModified">Last Modification: </p>
+    </footer>
+</body>
+
+</html>
