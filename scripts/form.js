@@ -53,9 +53,15 @@ window.addEventListener("load", () => {
     });
     
     form.addEventListener("submit", function (event) {
-        // event.preventDefault();
-        intReviewCount++;
-        console.log(intReviewCount);
+        
+        if (localStorage.getItem("ReviewCount")) {
+            intReviewCount = parseInt(localStorage.getItem("ReviewCount"));
+        }
+        {
+            intReviewCount++;
+            
+       }
+        
         localStorage.setItem("ReviewCount", intReviewCount );
     });
          
