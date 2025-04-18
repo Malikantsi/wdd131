@@ -1,6 +1,8 @@
 const lastModified = document.querySelector("#lastModified");
 const year = document.querySelector("#currentyear");
 const divOutterContainer = document.querySelector(".product-grid");
+const txtSearchText = document.querySelector("#txtSearch");
+const btnSearch = document.querySelector("#btnSearch");
 const today = new Date();
 let divProductContainer, objProductImgContainer, objProductImg, objProductH3Name, objProductDesc, objProductPriceobjProductOrder, objProductPrice, objProductOrderBtn;
 const products = [
@@ -105,10 +107,64 @@ year.innerHTML = today.getFullYear();
 
 
 window.addEventListener("load", () => {
-   loadAllProducts();
+    loadAllProducts();
+    btnSearch.addEventListener("click", () => { 
+       
+        searchProductByName(txtSearchText.value);
+    });
+   
 });
 
-function loadAllProducts() {        
+function searchProductByName(strSearch) {
+    divOutterContainer.innerHTML = ""; // Clear the container before loading new products
+    if (strSearch == "") {
+        loadAllProducts();
+        return;
+    }
+    strSearch = strSearch.toLowerCase();
+    const objFilteredArray = BakeryProducts.filter(product =>
+        product.name.toLowerCase().includes(strSearch)
+    );
+     
+    objFilteredArray.forEach(productitem => {
+        divProductContainer = document.createElement("div");
+        divProductContainer.classList.add("product");
+
+        objProductImgContainer = document.createElement("div");
+        objProductImgContainer.classList.add("product-img");
+
+        objProductImg = document.createElement("img");
+        objProductImg.setAttribute("src", productitem.image);
+        objProductImg.setAttribute("alt", productitem.name);
+        objProductImg.setAttribute("loading", "lazy");
+        objProductImgContainer.append(objProductImg);
+
+        objProductH3Name = document.createElement("h3");
+        objProductH3Name.innerText = productitem.name;
+
+        objProductDesc = document.createElement("p");
+        objProductDesc.innerText = productitem.name;
+
+        objProductOrder = document.createElement("div");
+        objProductOrder.classList.add("price-order");
+
+        objProductPrice = document.createElement("span");
+        objProductPrice.classList.add("price");
+        objProductPrice.innerText = productitem.price;
+
+        objProductOrderBtn = document.createElement("button");
+        objProductOrderBtn.classList.add("btn-order");
+        objProductOrderBtn.innerText = "ORDER";
+        objProductOrder.append(objProductPrice, objProductOrderBtn);
+        divProductContainer.append(objProductImgContainer, objProductH3Name, objProductDesc, objProductOrder);
+
+        divOutterContainer.append(divProductContainer);
+    });
+   
+  }
+
+function loadAllProducts() { 
+   
     BakeryProducts.forEach(productitem => {
         divProductContainer = document.createElement("div");
         divProductContainer.classList.add("product");
@@ -141,7 +197,6 @@ function loadAllProducts() {
         objProductOrder.append(objProductPrice, objProductOrderBtn);
         divProductContainer.append(objProductImgContainer, objProductH3Name, objProductDesc, objProductOrder);
 
-        console.log(divOutterContainer);
         divOutterContainer.append(divProductContainer);
     });
 }
