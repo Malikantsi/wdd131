@@ -149,6 +149,7 @@ function searchProductByName(strSearch) {
         objProductImgContainer.classList.add("product-img");
 
         objProductImg = document.createElement("img");
+        objProductImg.classList.add("product-img");
         objProductImg.setAttribute("src", productitem.image);
         objProductImg.setAttribute("alt", productitem.name);
         objProductImg.setAttribute("loading", "lazy");

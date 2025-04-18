@@ -240,6 +240,11 @@ footer {
     border-radius: 8px;
 }
 
+    .product-img img{
+        height: auto;
+        width: 200px;
+    }
+
 .price-order {
     margin-top: 1rem;
     display: flex;
