@@ -3,6 +3,7 @@ const year = document.querySelector("#currentyear");
 const divOutterContainer = document.querySelector(".product-grid");
 const txtSearchText = document.querySelector("#txtSearch");
 const btnSearch = document.querySelector("#btnSearch");
+const selSort = document.querySelector("#selSort");
 const today = new Date();
 let divProductContainer, objProductImgContainer, objProductImg, objProductH3Name, objProductDesc, objProductPriceobjProductOrder, objProductPrice, objProductOrderBtn;
 const products = [
@@ -109,14 +110,28 @@ year.innerHTML = today.getFullYear();
 window.addEventListener("load", () => {
     loadAllProducts();
     btnSearch.addEventListener("click", () => { 
-       
-        searchProductByName(txtSearchText.value);
+       searchProductByName(txtSearchText.value);
+    });
+    selSort.addEventListener("change", () => {
+       sortProducts();
     });
    
 });
 
+function sortProducts() {
+    divOutterContainer.innerHTML = ""; 
+    const strSelectedValue = selSort.value;
+    if (strSelectedValue === "Asc") {
+        BakeryProducts.sort((a, b) => a.name.localeCompare(b.name));
+    } else if (strSelectedValue === "Desc") { 
+        BakeryProducts.sort((b, a) => a.name.localeCompare(b.name));
+    }
+    loadAllProducts(); 
+ }
+   
+
 function searchProductByName(strSearch) {
-    divOutterContainer.innerHTML = ""; // Clear the container before loading new products
+    divOutterContainer.innerHTML = ""; 
     if (strSearch == "") {
         loadAllProducts();
         return;
@@ -164,7 +179,7 @@ function searchProductByName(strSearch) {
   }
 
 function loadAllProducts() { 
-   
+    
     BakeryProducts.forEach(productitem => {
         divProductContainer = document.createElement("div");
         divProductContainer.classList.add("product");
