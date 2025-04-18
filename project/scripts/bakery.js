@@ -1,16 +1,8 @@
 const lastModified = document.querySelector("#lastModified");
 const year = document.querySelector("#currentyear");
+const divOutterContainer = document.querySelector(".product-grid");
 const today = new Date();
-
-lastModified.innerHTML = `Last Modified: ${new Intl.DateTimeFormat(
-    "en-UK",
-    {
-        dateStyle: "full"
-    }
-).format(today)}`;
-
-year.innerHTML = today.getFullYear();
-
+let divProductContainer, objProductImgContainer, objProductImg, objProductH3Name, objProductDesc, objProductPriceobjProductOrder, objProductPrice, objProductOrderBtn;
 const products = [
     {
         id: "fc-1888",
@@ -37,11 +29,11 @@ const products = [
         name: "warp equalizer",
         averagerating: 5.0
     }
-];  
+];
 const BakeryProducts = [
     {
         name: "Birthday Cake",
-        image: "images/birthday-cake.webp",
+        image: "images/product1.webp",
         price: "R 350.00"
     },
     {
@@ -66,7 +58,7 @@ const BakeryProducts = [
     },
     {
         name: "Pipping-tips",
-        image: "images/pipping-tips.webp",
+        image: "images/pipping-tips.avif",
         price: "R 400.00"
     },
     {
@@ -102,26 +94,54 @@ const BakeryProducts = [
 ];
 
 
+lastModified.innerHTML = `Last Modified: ${new Intl.DateTimeFormat(
+    "en-UK",
+    {
+        dateStyle: "full"
+    }
+).format(today)}`;
+
+year.innerHTML = today.getFullYear();
+
+
 window.addEventListener("load", () => {
-    alert("Welcome to the Bakery Page!");
-    const productContainer = document.querySelector(".product-grid");
-    BakeryProducts.forEach((product) => {
-        const productCard = document.createElement("div");
-        productCard.classList.add("product-card");
+   loadAllProducts();
+});
 
-        const productName = document.createElement("h3");
-        productName.textContent = product.name;
-        productCard.appendChild(productName);
+function loadAllProducts() {        
+    BakeryProducts.forEach(productitem => {
+        divProductContainer = document.createElement("div");
+        divProductContainer.classList.add("product");
 
-        const productImage = document.createElement("img");
-        productImage.src = `images/${product.id}.webp`;
-        productImage.alt = `${product.name} image`;
-        productCard.appendChild(productImage);
+        objProductImgContainer = document.createElement("div");
+        objProductImgContainer.classList.add("product-img");
 
-        const rating = document.createElement("p");
-        rating.textContent = `Average Rating: ${product.averagerating}`;
-        productCard.appendChild(rating);
+        objProductImg = document.createElement("img");
+        objProductImg.setAttribute("src", productitem.image);
+        objProductImg.setAttribute("alt", productitem.name);
+        objProductImg.setAttribute("loading", "lazy");
+        objProductImgContainer.append(objProductImg);
 
-        productContainer.appendChild(productCard);
+        objProductH3Name = document.createElement("h3");
+        objProductH3Name.innerText = productitem.name;
+
+        objProductDesc = document.createElement("p");
+        objProductDesc.innerText = productitem.name;
+
+        objProductOrder = document.createElement("div");
+        objProductOrder.classList.add("price-order");
+
+        objProductPrice = document.createElement("span");
+        objProductPrice.classList.add("price");
+        objProductPrice.innerText = productitem.price;
+
+        objProductOrderBtn = document.createElement("button");
+        objProductOrderBtn.classList.add("btn-order");
+        objProductOrderBtn.innerText = "ORDER";
+        objProductOrder.append(objProductPrice, objProductOrderBtn);
+        divProductContainer.append(objProductImgContainer, objProductH3Name, objProductDesc, objProductOrder);
+
+        console.log(divOutterContainer);
+        divOutterContainer.append(divProductContainer);
     });
 }
